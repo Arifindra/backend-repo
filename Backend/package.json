@@ -1,0 +1,32 @@
+{
+  "name": "e-ujian-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --watch src --exec node src/server.js",
+    "seed": "node src/seed/seedAdmin.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "docx": "^9.5.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "pg": "^8.16.3",
+    "redis": "^4.6.5",
+    "sequelize": "^6.37.7",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "description": "1. Copy .env.example -> .env dan isi DATABASE_URL, JWT_SECRET, REDIS_URL (opsional)\r 2. npm install\r 3. npm run seed      # buat admin awal (opsional)\r 4. npm run dev       # jalankan server dev\r 5. API base: http://localhost:5000/api\r    - POST /api/auth/register\r    - POST /api/auth/login\r    - GET  /api/auth/profile (requires Authorization: Bearer <token>)\r    - GET  /api/users (admin)\r    - POST /api/exams\r    - GET  /api/exams\r    - POST /api/questions\r    - GET  /api/questions\r    - POST /api/results/submit",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
